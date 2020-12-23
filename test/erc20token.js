@@ -19,6 +19,8 @@ contract('ERC20Token', accounts => {
     assert(balance.eq(initialBalance))
   });
 
+  // This is to test that transfer went through
+
   it('should transfer token', async () => {
     const transfer = web3.utils.toBN(100);
     const receipt = await token.transfer(accounts[1], transfer);
